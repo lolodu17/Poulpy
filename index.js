@@ -1,5 +1,16 @@
 const Discord = require('discord.js')
- const bot = new Discord.Client()
+const bot = new Discord.Client()
+const client = new Discord.Client()
+var http = require('http');
+const content = new Discord.Client()
+const fs = require("fs");
+const ffmpeg = require ('ffmpeg')
+const yt = require('ytdl-core');
+con = console.log,
+
+
+
+
 
 
 setInterval(function() {
