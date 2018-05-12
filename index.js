@@ -69,7 +69,23 @@ try {
 	member.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
 
 }});
+bot.on("message", async message => {
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
 
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+if(cmd == `!clear`){
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission pour supprimer les message !/n/n You have not permission for remove send");
+    if(!args[0]) return message.channel.send("Vous devez préciser combien de message je dois supprimer !/n/n You must specify how many messages I must delete! ");
+    message.channel.bulkDelete(args[0]).then(() => {
+      message.channel.send(`Clear de ${args[0]} messages.`).then(msg => msg.delete(5000));
+  })
+
+  return;
+  }
+});
  bot.on("roleCreate", role =>{
 try{
         var emb = new Discord.RichEmbed()
