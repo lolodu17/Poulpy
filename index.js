@@ -9,10 +9,6 @@ const yt = require('ytdl-core');
 con = console.log,
 
 
-
-
-
-
 setInterval(function() {
         let rndNumber = Math.floor(Math.random() * 4) + 1;
         switch (rndNumber) {
