@@ -49,7 +49,7 @@ try{
             .setTitle("Rendez vous !")
             .setDescription(`@here Salut tous le monde je me présente déja sur suis poulpy-extension le robot (le frère de l'extension). <@342932332283559936> et <@357912301216595971> vous invite pour faire un petit event vocale sur sur le salon Vocale-Extension v.0.3 ;)`)
             .setFooter(`© Poulpy-Extension™ est tous droits réservés et Créé par The Octokling et Poulpy Extension`, bot.user.avatarURL)
-    member.guild.channels.find("name", 'annonces').send(emb);
+    message.guild.channels.find("name", 'annonces').send(emb);
 }catch(err){
 	message.channel.send("Une erreur c'est produite , veuillez en parlez à The octokling ou Poulpy Extension. Merci")
 }
