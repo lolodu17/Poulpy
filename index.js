@@ -55,4 +55,107 @@ try{
 }
     }});
 
+bot.on("guildMemberAdd", async member => {
+try {
+    let rol = member.guild.roles.find("name", "Les Inkling")
+    var emb = new Discord.RichEmbed()
+            .setColor("730000")
+            .setTitle("woomycation")
+            .setDescription(`:squid:${member.user.tag} est arivé(e):squid:`)
+            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+    member.guild.channels.find("name", 'woomycation').send(emb);
+    member.addRole(rol)
+}catch(err){
+	member.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+
+}});
+
+ bot.on("roleCreate", role =>{
+try{
+        var emb = new Discord.RichEmbed()
+        .setColor("FF0000")
+        .setTitle("woomycation")
+        .setDescription(`Un rôle viens d'être ,nommé : ${role.name}`)
+        .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+        role.guild.channels.find("name", 'woomycation').send(emb)
+	role.react(":thumbsdown:")
+}catch(err){
+	role.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+
+}
+    });
+
+ bot.on("roleDelete", role =>{
+try{
+        var emb = new Discord.RichEmbed()
+        .setColor("730000")
+        .setTitle("woomycation")
+        .setDescription(`Le rôle ${role.name} viens d'être supprimé sur ${role.guild.name}. `)
+        .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+    role.guild.channels.find("name", 'woomycation').send(emb)
+        }catch(err){
+	role.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+
+}
+    })
+
+
+bot.on("channelsDelete", channels=>{
+try{
+        var emb = new Discord.RichEmbed()
+        .setColor("730000")
+        .setTitle("woomycation")
+        .setDescription(`Un nouveau channel vient d'être supprimer sur ${channels.guild.name}.`)
+        .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+    channels.guild.channels.find("name", 'woomycation').send(emb)
+       }catch(err){
+	channels.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+
+} 
+    })
+
+bot.on("channelsCreate", channels =>{
+try{
+        var emb = new Discord.RichEmbed()
+        .setColor("730000")
+        .setTitle("woomycation")
+        .setDescription(`Un channel vient d'être supprimé sur ${channels.guild.name}.`)
+        .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+    channels.guild.channels.find("name", 'woomycation').send(emb)
+        }catch(err){
+	channels.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+
+}
+    })
+
+
+ bot.on("emojiCreate", emoji =>{
+try{
+        var emb = new Discord.RichEmbed()
+            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+            .setColor("730000")
+            .setTitle("woomycation")
+            .setDescription(`L'image ${emoji.name} :${emoji.name}: viens d'être importé pour un émoji sur ${emoji.guild.name}.`)
+        emoji.guild.channels.find("name", 'woomycation').send(emb)
+}catch(err){
+	emoji.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+
+}
+    })
+
+ bot.on("emojiDelete", emoji =>{
+try{
+        var emb = new Discord.RichEmbed()
+            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+            .setColor("730000")
+            .setTitle("woomycation")
+            .setDescription(`L'emoji ${emoji.name} :${emoji.name}: viens d'être supprimé sur ${emoji.guild.name}.`)
+        emoji.guild.channels.find("name", 'woomycation').send(emb)
+        }catch(err){
+	emoji.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+
+}
+    })
+
+
   bot.login(process.env.TOKEN)
