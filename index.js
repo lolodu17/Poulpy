@@ -23,11 +23,14 @@ setInterval(function() {
 	  case 3:
                 bot.user.setUsername("Poulpy-Extension (v.0.3)™")
  		bot.user.setGame("The Octokling#1148 me fait grandiiiiir !!!");
-                break;
-                     
+                break; 
 	  case 4:
                 bot.user.setUsername("Poulpy-Extension™")
  		bot.user.setGame("Poulpy Extension v.0.3#2487 améliore mon frère pour qu'il soit en 0.4 .");
+                break;
+	  case 5:
+                bot.user.setUsername("Poulpy-Extension™")
+ 		bot.user.setGame("ஐ ẦßχῪ ஐ#2487 revien vite nous voir :sob:");
                 break;
         }
     }, 999999);
@@ -62,11 +65,11 @@ try {
             .setColor("730000")
             .setTitle("woomycation")
             .setDescription(`:squid:${member.user.tag} est arivé(e):squid:`)
-            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+            .setFooter(`© Poulpy-Extension™ est tous droits réservés et Créé par The Octokling et Poulpy Extension`, bot.user.avatarURL)
     member.guild.channels.find("name", '💭blabla💬').send(emb);
     member.addRole(rol)
 }catch(err){
-	member.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+	member.owner.send("une erreur es survenue lors de l'envoie de l'information. ")
 
 }});
 bot.on("message", async message => {
@@ -77,8 +80,8 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 if(cmd == `!clear`){
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission pour supprimer les message !/n/n You have not permission for remove send");
-    if(!args[0]) return message.channel.send("Vous devez préciser combien de message je dois supprimer !/n/n You must specify how many messages I must delete! ");
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission pour supprimer les message !");
+    if(!args[0]) return message.channel.send("Vous devez préciser combien de message je dois supprimer !");
     message.channel.bulkDelete(args[0]).then(() => {
       message.channel.send(`Clear de ${args[0]} messages.`).then(msg => msg.delete(5000));
   })
@@ -92,11 +95,11 @@ try{
         .setColor("FF0000")
         .setTitle("woomycation")
         .setDescription(`Un rôle viens d'être ,nommé : ${role.name}`)
-        .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+        .setFooter(`© Poulpy-Extension™ est tous droits réservés et Créé par The Octokling et Poulpy Extension`, bot.user.avatarURL)
         role.guild.channels.find("name", '💭blabla💬').send(emb)
 	role.react(":thumbsdown:")
 }catch(err){
-	role.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+	role.owner.send("une erreur es survenue lors de l'envoie de l'information.")
 
 }
     });
@@ -107,10 +110,10 @@ try{
         .setColor("730000")
         .setTitle("woomycation")
         .setDescription(`Le rôle ${role.name} viens d'être supprimé sur ${role.guild.name}. `)
-        .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+        .setFooter(`© Poulpy-Extension™ est tous droits réservés et Créé par The Octokling et Poulpy Extension`, bot.user.avatarURL)
     role.guild.channels.find("name", '💭blabla💬').send(emb)
         }catch(err){
-	role.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+	role.owner.send("une erreur es survenue lors de l'envoie de l'information.")
 
 }
     })
@@ -122,10 +125,10 @@ try{
         .setColor("730000")
         .setTitle("woomycation")
         .setDescription(`Un nouveau channel vient d'être supprimer sur ${channels.guild.name}.`)
-        .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+        .setFooter(`© Poulpy-Extension™ est tous droits réservés et Créé par The Octokling et Poulpy Extension`, bot.user.avatarURL)
     channels.guild.channels.find("name", '💭blabla💬').send(emb)
        }catch(err){
-	channels.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+	channels.owner.send("une erreur es survenue lors de l'envoie de l'information.")
 
 } 
     })
@@ -136,10 +139,10 @@ try{
         .setColor("730000")
         .setTitle("woomycation")
         .setDescription(`Un channel vient d'être supprimé sur ${channels.guild.name}.`)
-        .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+        .setFooter(`© Poulpy-Extension™ est tous droits réservés et Créé par The Octokling et Poulpy Extension`, bot.user.avatarURL)
     channels.guild.channels.find("name", '💭blabla💬').send(emb)
         }catch(err){
-	channels.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+	channels.owner.send("une erreur es survenue lors de l'envoie de l'information.")
 
 }
     })
@@ -148,13 +151,13 @@ try{
  bot.on("emojiCreate", emoji =>{
 try{
         var emb = new Discord.RichEmbed()
-            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+            .setFooter(`© Poulpy-Extension™ est tous droits réservés et Créé par The Octokling et Poulpy Extension`, bot.user.avatarURL)
             .setColor("730000")
             .setTitle("woomycation")
             .setDescription(`L'image ${emoji.name} :${emoji.name}: viens d'être importé pour un émoji sur ${emoji.guild.name}.`)
         emoji.guild.channels.find("name", '💭blabla💬').send(emb)
 }catch(err){
-	emoji.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+	emoji.owner.send("une erreur es survenue lors de l'envoie de l'information.")
 
 }
     })
@@ -162,13 +165,13 @@ try{
  bot.on("emojiDelete", emoji =>{
 try{
         var emb = new Discord.RichEmbed()
-            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+            .setFooter(`© Poulpy-Extension™ est tous droits réservés et Créé par The Octokling et Poulpy Extension`, bot.user.avatarURL)
             .setColor("730000")
             .setTitle("woomycation")
             .setDescription(`L'emoji ${emoji.name} :${emoji.name}: viens d'être supprimé sur ${emoji.guild.name}.`)
         emoji.guild.channels.find("name", '💭blabla💬').send(emb)
         }catch(err){
-	emoji.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+	emoji.owner.send("une erreur es survenue lors de l'envoie de l'information.")
 
 }
     })
